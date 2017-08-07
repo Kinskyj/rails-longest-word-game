@@ -1,0 +1,15 @@
+<h1>First, your letters:</h1>
+
+<p><%= @grid_display %></p>
+
+<form action="/score" method="get">
+  <label for="user_input">Your word:</label>
+  <input type="hidden" name ="grid_result" value="<%= @grid %>">
+  <input type="hidden" name="start_time" value="<%= Time.now %>">
+  <input type="text" id="user_input" name="user_input" placeholder="Your longest word">
+  <input type="submit" value="Go on!">
+</form>
+
+
+
+
